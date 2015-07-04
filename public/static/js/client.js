@@ -87,6 +87,8 @@ $(function () {
         var lastSeen = data.lastSeen;
         var c = $('#message').attr('username');
         if (c === username) {
+            var d = new Date(lastSeen);
+            lastSeen = dateFormat(d, "dddd, mmmm dS, yyyy, h:MM:ss TT");
             var c = '<div class="sub header">' + lastSeen + "</div>";
             $('#header').append(c);
         }
@@ -273,6 +275,8 @@ $(function () {
             socket.emit('seen', {id: id, receiver: message.to});
             message.seen = 1;
         }
+        var d = new Date(date);
+        date = dateFormat(d, "dddd, mmmm dS, yyyy, h:MM:ss TT");
         var c = '<div class="comment">';
         c += '<a class="avatar">';
         c += '<img src="static/avatars/1.jpg"></a>';
