@@ -262,6 +262,9 @@ $(function () {
             $('.horizontal.divider.ui').after(c);
         else
             $('#alert').prepend(c);
+        setTimeout(function () {
+            $('.negative.message').remove();
+        }, 3000);
     }
 
     function addMessage(message) {

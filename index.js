@@ -125,6 +125,10 @@ io.on('connection', function (socket) {
             if (err) {
                 console.log(err);
             } else if (result.length) {
+                if(sockets[username] !== undefined){
+                    socket.emit('signin-status', {status: "The username is online now!"});
+                    return;
+                }
                 socket.username = username;
                 sockets[username] = socket;
                 var cursor = messages.find({ $or: [
