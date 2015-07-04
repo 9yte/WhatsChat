@@ -1,0 +1,79 @@
+html, body {
+    height:100%;
+}
+
+body {
+
+}
+
+#container {
+    width:1080px;
+    height:100%;
+    margin:0 auto;
+    padding:50px;
+}
+
+#friends-list {
+    background:#fff;
+    border:1px solid #ddd;
+    border-right:3px double #ddd;
+    height:100%;
+    border-radius:5px 0 0 5px;
+    overflow:auto;
+}
+
+#friends-list #user-info {
+    width:100%;
+    padding:20px 10px;
+}
+
+#friends-list #user-info img.ui.image {
+    margin-bottom:10px;
+}
+
+#friends-list #roster {
+    width:100%;
+}
+
+#friends-list #roster .active.item {
+    background:none;
+}
+
+#messages-pane {
+    background:#fff;
+    border:1px solid #ddd;
+    border-left:0;
+    height:100%;
+    border-radius:0 5px 5px 0;
+    position:relative;
+}
+
+#messages-pane #message-header {
+    position:absolute;
+    top:0;
+    right:0;
+    left:0;
+    background:#f7f7f7;
+    border-bottom:1px solid #ddd;
+    padding:15px 20px;
+    z-index:1000;
+}
+
+#messages-pane #messages {
+    padding:80px 15px 60px 15px;
+    height:100%;
+    overflow:auto;
+    margin-left:0;
+    z-index:1;
+}
+
+#messages-pane #message-form-container {
+    position:absolute;
+    bottom:0;
+    right:0;
+    left:0;
+    background:#eee;
+    padding:10px;
+    border-top:1px solid #ddd;
+    z-index:1000;
+}

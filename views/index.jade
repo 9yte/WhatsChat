@@ -1,0 +1,69 @@
+doctype html
+html
+    head
+        title Hello
+    html
+        head
+            meta(charset='utf-8')
+            meta(http-equiv='X-UA-Compatible', content='IE=edge')
+            title Chat
+            link(rel='stylesheet', type='text/css', href='static/semantic/semantic.min.css')
+            link(rel='stylesheet', type='text/css', href='static/css/style.css')
+        body
+            .ui.modal
+                .header
+                    | Sign In or Sign Up please!
+                .content#alert
+                    .ui.form
+                        .two.fields
+                            .field
+                                label Name
+                                input(id='name-signup', placeholder='Name', type='text')
+                            .field
+                                label Username
+                                input(id='username-signup', placeholder='Username', type='text')
+                        .ui.submit.button#signup Sign Up
+                    .ui.horizontal.divider
+                        | Or
+                    .ui.form
+                        .two.fields
+                            .field
+                                label Username
+                                input(id='username-signin', placeholder='Username', type='text')
+                        .ui.submit.button#signin Sign In
+            #container.ui.grid
+                #friends-list.five.wide.column
+                    #user-info.ui.raised.stacked.segment
+                        h2.ui.icon.center.aligned.header
+                            img.ui.circular.image(src='static/avatars/5.jpg')
+                            .content#name
+                                | Welcome, Jane Doe!
+                                .sub.header#username @janedoe
+                    #roster.ui.vertical.menu.left
+                        .item
+                            .ui.transparent.icon.input
+                                input(id='friend-name', type='text', placeholder='Add a friend...')
+                                i.user.icon
+                        a.active.green.item
+                            | janedoe
+                            .ui.blue.label 1
+                #messages-pane.eleven.wide.column(style="display:none")
+                    #message-header
+                        h2.ui.header
+                            i.comments.icon
+                            .content#header
+                                | Conversation with @sadjad
+                                .sub.header Online
+                    #messages
+                        .ui.minimal.comments
+                    #message-form-container
+                        .ui.form
+                            .ui.action.input
+                                input(id='message', type='text', placeholder='Your message here...', dir='auto')
+                                .ui.green.icon.button#send
+                                    i.send.icon
+                                    | &nbsp;Send
+            script(src='static/js/jquery-2.1.4.min.js')
+            script(src='static/semantic/semantic.min.js')
+            script(src='static/js/socket.io-1.2.0.js')
+            script(src='static/js/client.js')
