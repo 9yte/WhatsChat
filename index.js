@@ -73,6 +73,7 @@ io.on('connection', function (socket) {
         if(socket.username === undefined){
             return;
         }
+        sockets[username] = undefined;
         users.find({username: username}).toArray(function (err, result) {
             if (err) {
                 console.log(err);
