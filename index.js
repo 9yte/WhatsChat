@@ -161,6 +161,10 @@ io.on('connection', function (socket) {
     // when the user send a friend name to server
     socket.on('find-friend', function (data) {
         var friendUsername = data.friend;
+        if (friendUsername === socket.username){
+            socket.emit('find-friend-status', {status: "Please enter a valid username!"});
+            return;
+        }
         users.find({username: friendUsername}).toArray(function (err, result) {
             if (err) {
                 console.log(err);
