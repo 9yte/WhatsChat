@@ -1,4 +1,10 @@
 
+——————————————————————————————————————Description——————————————————————————————————————————
+
+A joint project for Web Programming course, a realtime chat program using Web Socket on Node.js platform.
+
+WhatsChat is a chat client & server program implemented using Node.js platform. The most important feature of the chat program is being realtime and obviously bidirectional event-based communication. That is to say, there is no AJAX in play. Every event is reported to server realtime, so there is no delay between the occurrence of an event and notifying users.
+
 ——————————————————————————————————————How to run——————————————————————————————————————————
 
 
@@ -15,7 +21,7 @@ the server url is “http://127.0.0.1:3000/“
 Please pay attention that your browser will be asked to allow notifications appear!
 
 
-——————————————————————————————————————How to run——————————————————————————————————————————
+——————————————————————————————————————Requirements——————————————————————————————————————————
 Requierments:
 1. mongodb database on your system
 2. mongodb module in node
